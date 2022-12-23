@@ -24,10 +24,10 @@ import {ColorModeSwitcher} from "./ColorModeSwitcher"
 import {Logo} from "./Logo"
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
-import Home from "./Components/Pages/home";
-import Charts from "./Components/Pages/charts";
-import Forms from "./Components/Pages/forms";
-import Reports from "./Components/Pages/reports";
+import Home from "./components/pages/home";
+import Charts from "./components/pages/charts";
+import Forms from "./components/pages/forms";
+import Reports from "./components/pages/reports";
 
 export default function App() {
     return (

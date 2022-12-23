@@ -1,4 +1,4 @@
-import {Text, Box } from "@chakra-ui/react";
+import {Text, Box, Heading} from "@chakra-ui/react";
 import {DataTable, TableInstance, Button} from '@saas-ui/react'
 // import * as React from "react";
 import {Column} from 'react-table';
@@ -89,6 +89,19 @@ export default function Reports() {
                     isSelectable
                     onSelectedRowsChange={(selected) => console.log(selected)}
                     data={data}/>
+            </Box>
+
+
+            <Box overflowX="auto">
+                <Heading>Second Table</Heading>
+                <DataTable
+                    size='sm'
+                    ref={tableRef}
+                    columns={columns}
+                    data={data}>
+
+
+                </DataTable>
             </Box>
         </Box>
     )

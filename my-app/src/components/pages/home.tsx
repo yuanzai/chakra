@@ -1,4 +1,4 @@
-import {AppShell} from "@saas-ui/app-shell";
+import {AppShell} from "@saas-ui/react";
 import {Box, Flex, Text} from "@chakra-ui/react";
 import {Logo} from "../../Logo";
 import {ColorModeSwitcher} from "../../ColorModeSwitcher";
@@ -24,7 +24,14 @@ export default function Home() {
                 </Flex>
             }
             sidebar={
-                <Sidebar breakpoints={{ base: true, sm: false }}>
+                <Sidebar
+
+                    breakpoints={{ base: true, sm: false }}
+                    height="400px"
+                    width="220px"
+                    minWidth="220px"
+                    maxWidth="320px">
+
                     <SidebarSection>
                         <NavItem label="Home" href="/" />
                         <NavItem label="Charts" href="/charts"/>
