@@ -18,3 +18,7 @@ npm i @saas-ui/react @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 fra
 
 After installing Saas UI and Chakra UI, you need to set up the SaasProvider at the root of your application. This can be either in your index.jsx or index.tsx
 
+```
+npm i @saas-ui/app-shell
+npm i @saas-ui/sidebar
+```
