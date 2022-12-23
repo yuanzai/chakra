@@ -1,4 +1,4 @@
-import {Text, Box, Heading} from "@chakra-ui/react";
+import {Text, Box, Heading, Divider, VStack} from "@chakra-ui/react";
 import {DataTable, TableInstance, Button} from '@saas-ui/react'
 // import * as React from "react";
 import {Column} from 'react-table';
@@ -68,21 +68,23 @@ export default function Reports() {
     const tableRef = useRef<TableInstance<ExampleData>|null>(null)
 
     return (
-        <Box>
-            <Text textStyle="h4">Reports</Text>
-            <Button
-                onClick={() => {
-                    if (tableRef && tableRef.current) {
-                        tableRef.current?.toggleAllRowsSelected(
-                            !tableRef.current?.isAllRowsSelected
-                        )
-                    }
-                }
-                }
-                label="Select all rows"
-            />
+
+        <VStack align={"left"}>
+            <Text textStyle="h3">Table - selectable - SaaS UI DataTable component</Text>
+
 
             <Box overflowX="auto">
+                <Button
+                    onClick={() => {
+                        if (tableRef && tableRef.current) {
+                            tableRef.current?.toggleAllRowsSelected(
+                                !tableRef.current?.isAllRowsSelected
+                            )
+                        }
+                    }
+                    }
+                    label="Select all rows"
+                />
                 <DataTable
                     ref={tableRef}
                     columns={columns}
@@ -93,16 +95,15 @@ export default function Reports() {
 
 
             <Box overflowX="auto">
-                <Heading>Second Table</Heading>
+                <Text textStyle="h3">Table - thin - SaaS UI DataTable component</Text>
                 <DataTable
                     size='sm'
-                    ref={tableRef}
                     columns={columns}
                     data={data}>
 
 
                 </DataTable>
             </Box>
-        </Box>
+        </VStack>
     )
 }
