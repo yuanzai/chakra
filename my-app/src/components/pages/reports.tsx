@@ -3,6 +3,9 @@ import {DataTable, TableInstance, Button} from '@saas-ui/react'
 // import * as React from "react";
 import {Column} from 'react-table';
 import React, {useRef} from "react";
+import MyTanTable, { Person } from "../charts/tanstack-table";
+import ExpenseTable from "../charts/expense-table";
+import MyExcel from "../charts/excel";
 //
 // import {
 //     createColumnHelper,
@@ -63,6 +66,32 @@ const data: ExampleData[] = [
     },
 ]
 
+const tanTableData: Person[] = [
+    {
+        firstName: 'tanner',
+        lastName: 'linsley',
+        age: 24,
+        visits: 100,
+        status: 'In Relationship',
+        progress: 50,
+    },
+    {
+        firstName: 'tandy',
+        lastName: 'miller',
+        age: 40,
+        visits: 40,
+        status: 'Single',
+        progress: 80,
+    },
+    {
+        firstName: 'joe',
+        lastName: 'dirte',
+        age: 45,
+        visits: 20,
+        status: 'Complicated',
+        progress: 10,
+    },
+]
 
 export default function Reports() {
     const tableRef = useRef<TableInstance<ExampleData>|null>(null)
@@ -104,6 +133,11 @@ export default function Reports() {
 
                 </DataTable>
             </Box>
+
+            <MyTanTable data={tanTableData}/>
+            <ExpenseTable data={tanTableData}/>
+
+            <MyExcel/>
         </VStack>
     )
 }

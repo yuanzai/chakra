@@ -33,7 +33,7 @@ export default function Home() {
                     maxWidth="320px">
 
                     <SidebarSection>
-                        <NavItem label="Home" href="/" />
+                        <NavItem isActive label="Home" href="/" />
                         <NavItem label="Charts" href="/charts"/>
                         <NavItem label="Forms" href="/forms"/>
                     </SidebarSection>
