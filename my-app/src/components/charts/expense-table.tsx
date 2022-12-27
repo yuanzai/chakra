@@ -210,7 +210,7 @@ export const data2: IncomeCalculatedColumn[] = [
 
 
 
-const MyTanTable: React.FC<{ data: any[] }> = ({data}) => {
+const MyTanTable: React.FC = () => {
     return (
         <Box borderWidth='1px' borderRadius='lg' p="5">
             <Table size="sm" py="1px">

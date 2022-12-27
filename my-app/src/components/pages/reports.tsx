@@ -1,9 +1,9 @@
-import {Text, Box, Heading, Divider, VStack} from "@chakra-ui/react";
-import {DataTable, TableInstance, Button} from '@saas-ui/react'
+import {Box, Text, VStack} from "@chakra-ui/react";
+import {Button, DataTable, TableInstance} from '@saas-ui/react'
 // import * as React from "react";
 import {Column} from 'react-table';
 import React, {useRef} from "react";
-import MyTanTable, { Person } from "../charts/tanstack-table";
+import {Person} from "../charts/tanstack-table";
 import ExpenseTable from "../charts/expense-table";
 import MyExcel from "../charts/excel";
 //
@@ -134,9 +134,7 @@ export default function Reports() {
                 </DataTable>
             </Box>
 
-            <MyTanTable data={tanTableData}/>
-            <ExpenseTable data={tanTableData}/>
-
+            <ExpenseTable/>
             <MyExcel/>
         </VStack>
     )
