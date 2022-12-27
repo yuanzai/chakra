@@ -5,6 +5,7 @@ import Home from "./components/pages/home";
 import Charts from "./components/pages/charts";
 import Forms from "./components/pages/forms";
 import Reports from "./components/pages/reports";
+import Tables from "./components/pages/tables";
 
 export default function App() {
     return (
@@ -14,6 +15,7 @@ export default function App() {
                     <Route index element={<Reports />} />
                     <Route path='/charts' element={<Charts/>}/>
                     <Route path='/forms' element={<Forms/>}/>
+                    <Route path='/tables' element={<Tables/>}/>
                 </Route>
             </Routes>
         </Router>

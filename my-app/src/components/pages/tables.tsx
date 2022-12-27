@@ -93,46 +93,15 @@ const tanTableData: Person[] = [
     },
 ]
 
-export default function Reports() {
+export default function Tables() {
     const tableRef = useRef<TableInstance<ExampleData>|null>(null)
 
     return (
 
         <VStack align={"left"}>
-            <Text textStyle="h3">Table - selectable - SaaS UI DataTable component</Text>
-
-
-            <Box overflowX="auto">
-                <Button
-                    onClick={() => {
-                        if (tableRef && tableRef.current) {
-                            tableRef.current?.toggleAllRowsSelected(
-                                !tableRef.current?.isAllRowsSelected
-                            )
-                        }
-                    }
-                    }
-                    label="Select all rows"
-                />
-                <DataTable
-                    ref={tableRef}
-                    columns={columns}
-                    isSelectable
-                    onSelectedRowsChange={(selected) => console.log(selected)}
-                    data={data}/>
-            </Box>
-
-
-            <Box overflowX="auto">
-                <Text textStyle="h3">Table - thin - SaaS UI DataTable component</Text>
-                <DataTable
-                    size='sm'
-                    columns={columns}
-                    data={data}>
-
-
-                </DataTable>
-            </Box>
+            <Text textStyle="h3">Pivot like and Excel like Tables</Text>
+            <ExpenseTable/>
+            <MyExcel/>
         </VStack>
     )
 }
