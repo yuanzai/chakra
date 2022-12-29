@@ -37,6 +37,7 @@ export default function Home() {
                         <NavItem label="Charts" href="/charts"/>
                         <NavItem label="Forms" href="/forms"/>
                         <NavItem label="Tables" href="/tables"/>
+                        <NavItem label="Property" href="/property"/>
                     </SidebarSection>
                 </Sidebar>
             }
