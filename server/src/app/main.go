@@ -42,8 +42,8 @@ func main() {
 		Pretty: true,
 	})
 	http.Handle("/graphql", disableCors(h))
-	log.Println("Now server is running on port 443")
-	err := http.ListenAndServe(":443", nil)
+	log.Println("Now server is running on port 3000")
+	err := http.ListenAndServe(":3000", nil)
 	if err != nil {
 		log.Fatal(err)
 	}
