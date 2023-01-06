@@ -1,16 +1,8 @@
 import {Box, Text, VStack} from "@chakra-ui/react";
 import {Button, DataTable, TableInstance} from '@saas-ui/react'
-// import * as React from "react";
 import {Column} from 'react-table';
 import React, {useRef} from "react";
 import {Person} from "../charts/tanstack-table";
-import ExpenseTable from "../charts/expense-table";
-import MyExcel from "../charts/excel";
-//
-// import {
-//     createColumnHelper,
-// } from '@tanstack/react-table'
-
 
 type ExampleData = {
     id: number

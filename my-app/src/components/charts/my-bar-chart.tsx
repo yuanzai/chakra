@@ -9,13 +9,14 @@ const MyBarChart: React.FC<{ data: any[] }> = ({data}) => {
     console.log(theme.colors.red[350])
     return (
         <Box>
+            {/*ordering matters in terms of what gets shown first*/}
             <BarChart width={600} height={240} data={data}>
-                <Bar dataKey="uv" barSize={20} fill={theme.colors.blue[300]}/>
-                <Bar dataKey="pv" barSize={20} fill={theme.colors.red[300]}/>
+                <Tooltip/>
+                <Bar dataKey="uv" barSize={15} fill={theme.colors.blue[300]}/>
+                <Bar dataKey="pv" barSize={15} fill={theme.colors.red[300]}/>
                 <CartesianGrid stroke={theme.colors.gray[150]}/>
                 <XAxis dataKey="name" tick={{fontSize: theme.fontSizes["xs"]}}/>
                 <YAxis tick={{fontSize: theme.fontSizes["xs"]}}/>
-                <Tooltip/>
                 <Legend/>
             </BarChart>
         </Box>

@@ -1,8 +1,5 @@
 import {Text, VStack} from "@chakra-ui/react";
-import {TableInstance} from '@saas-ui/react'
-import React, {useRef} from "react";
-import ExpenseTable from "../charts/expense-table";
-import MyExcel from "../charts/excel";
+import React from "react";
 
 
 export default function Property() {

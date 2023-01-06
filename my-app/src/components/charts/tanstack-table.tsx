@@ -53,8 +53,8 @@ const MyTanTable: React.FC<{ data: any[] }> = ({data}) => {
     const rerender = React.useReducer(() => ({}), {})[1]
 
     const table = useReactTable({
-        data,
-        columns,
+        data: data,
+        columns: columns,
         getCoreRowModel: getCoreRowModel(),
     })
 

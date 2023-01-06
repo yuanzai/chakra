@@ -5,6 +5,7 @@ import {ColorModeSwitcher} from "../../ColorModeSwitcher";
 import {NavItem, Sidebar, SidebarSection} from "@saas-ui/sidebar";
 import * as React from "react";
 import {Link, Outlet} from "react-router-dom";
+import PagiTables from "./pagi-tables";
 
 export default function Home() {
     return (
@@ -38,6 +39,7 @@ export default function Home() {
                         <NavItem label="Forms" href="/forms"/>
                         <NavItem label="Tables" href="/tables"/>
                         <NavItem label="Property" href="/property"/>
+                        <NavItem label="PagiTables" href="/pagi-tables"/>
                     </SidebarSection>
                 </Sidebar>
             }
