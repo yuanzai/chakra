@@ -22,6 +22,7 @@ import (
 	"github.com/yuanzai/chakra/server/src/app/data"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/yuanzai/chakra/server/src/app/mutations"
 	"github.com/yuanzai/chakra/server/src/app/queries"
@@ -36,14 +37,19 @@ var schema, _ = graphql.NewSchema(graphql.SchemaConfig{
 })
 
 func main() {
+	port, ok := os.LookupEnv("PORT")
+	if !ok {
+		port = "3000"
+		log.Println("Cannot find PORT env var. Using default of 3000")
+	}
 	data.Globalstore = data.NewInMemDatastore()
 	h := handler.New(&handler.Config{
 		Schema: &schema,
 		Pretty: true,
 	})
 	http.Handle("/graphql", disableCors(h))
-	log.Println("Now server is running on port 3000")
-	err := http.ListenAndServe(":3000", nil)
+	log.Println("Now server is running on port " + port)
+	err := http.ListenAndServe(":"+port, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
