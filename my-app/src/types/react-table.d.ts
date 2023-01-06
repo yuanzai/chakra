@@ -6,6 +6,5 @@ declare module '@tanstack/react-table' {
 
     interface ColumnMeta {
         isNumeric?: boolean,
-        url?: string,
     }
 }
