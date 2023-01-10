@@ -4,9 +4,8 @@ import * as ReactDOM from "react-dom/client"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import * as serviceWorker from "./serviceWorker"
-import { theme as baseTheme } from '@saas-ui/react'
-import {SaasProvider} from "@saas-ui/react";
-
+import {SaasProvider, theme as baseTheme} from '@saas-ui/react'
+import BackendClientProvider from "./client/backend-client";
 
 const container = document.getElementById("root")
 if (!container) throw new Error('Failed to find the root element');
@@ -24,12 +23,14 @@ const theme = extendTheme(
 )
 
 root.render(
-  <React.StrictMode>
-    <ColorModeScript />
-    <SaasProvider theme={theme}>
-      <App />
-    </SaasProvider>
-  </React.StrictMode>,
+    <React.StrictMode>
+        <ColorModeScript/>
+        <BackendClientProvider>
+            <SaasProvider theme={theme}>
+                <App/>
+            </SaasProvider>
+        </BackendClientProvider>
+    </React.StrictMode>,
 )
 
 // If you want your app to work offline and load faster, you can change

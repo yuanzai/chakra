@@ -1,22 +1,6 @@
-import {
-    Box,
-    Button,
-    Center,
-    Grid,
-    HStack,
-    Select,
-    Stack,
-    Text,
-    Table,
-    Thead,
-    Tbody,
-    Td,
-    Tr,
-    Th,
-    Tfoot
-} from "@chakra-ui/react";
+import {Box, HStack, Select, Table, Tbody, Td, Text, Tfoot, Th, Thead, Tr} from "@chakra-ui/react";
 // import * as React from "react";
-import React, {FC, ChangeEvent, useEffect, useState, useMemo} from "react";
+import React, {ChangeEvent, useEffect, useMemo, useState} from "react";
 import {
     Pagination,
     PaginationContainer,
@@ -27,7 +11,7 @@ import {
     PaginationSeparator,
     usePagination,
 } from "@ajna/pagination";
-import {createColumnHelper, useReactTable, getCoreRowModel, flexRender} from "@tanstack/react-table";
+import {createColumnHelper, flexRender, getCoreRowModel, useReactTable} from "@tanstack/react-table";
 
 // https://karthikraja555.medium.com/server-side-pagination-in-react-table-a4311b730d19
 // https://www.npmjs.com/package/@ajna/pagination#usepagination

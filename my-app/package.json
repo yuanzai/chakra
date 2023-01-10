@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@ajna/pagination": "^1.4.19",
+    "@apollo/client": "^3.7.3",
     "@chakra-ui/react": "^2.4.6",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -20,6 +21,7 @@
     "@types/react-dom": "^18.0.9",
     "@types/react-table": "^7.7.12",
     "framer-motion": "^8.1.7",
+    "graphql": "^16.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^3.11.0",
@@ -35,7 +37,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "codegen": "graphql-codegen --config codegen.ts"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -53,6 +56,9 @@
     ]
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.6.0"
+    "@faker-js/faker": "^7.6.0",
+    "@graphql-codegen/cli": "2.16.3",
+    "@graphql-codegen/client-preset": "1.2.5",
+    "@graphql-codegen/introspection": "^2.2.3"
   }
 }

@@ -8,6 +8,7 @@ import {
 } from '@tanstack/react-table'
 import {Box, Link, Table, Tbody, Td, Tfoot, Th, Thead, Tr, Text} from "@chakra-ui/react";
 import {NumericFormat} from "react-number-format";
+import {ColumnDef} from "@tanstack/table-core/src/types";
 
 export type SubrowData = {
     firstCol: string
@@ -130,20 +131,24 @@ const data: SubrowData[] = [
         ],
     }
 ]
-
-const SubrowTable: React.FC = () => {
+type GenericTableProps<T> = {
+    data: T[]
+    columns: ColumnDef<T, any>[]
+    subrows?: (originalRow: T, index: number) => undefined | T[]
+}
+export default function GenericTable<T>(props: GenericTableProps<T>) {
     const rerender = React.useReducer(() => ({}), {})[1]
 
     const [expanded, setExpanded] = React.useState<ExpandedState>({})
 
     const table = useReactTable({
-        data,
-        columns,
+        data: props.data,
+        columns: props.columns,
         state: {
             expanded,
         },
         onExpandedChange: setExpanded,
-        getSubRows: row => row.subrows,
+        getSubRows: props.subrows,
         getCoreRowModel: getCoreRowModel(),
         getFilteredRowModel: getFilteredRowModel(),
         getExpandedRowModel: getExpandedRowModel(),
@@ -186,5 +191,3 @@ const SubrowTable: React.FC = () => {
         </Box>
     )
 }
-
-export default SubrowTable;

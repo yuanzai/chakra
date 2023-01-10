@@ -1,0 +1,21 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type House {
+  id: ID!
+  address: String!
+  state: String!
+  leases: [Lease!]!
+}
+
+type Lease {
+  id: ID!
+  name: String!
+}
+
+input NewHouse {
+  address: String!
+  state: String!
+  leases: [ID!]!
+}

@@ -40,6 +40,7 @@ export default function Home() {
                         <NavItem label="Tables" href="/tables"/>
                         <NavItem label="Property" href="/property"/>
                         <NavItem label="PagiTables" href="/pagi-tables"/>
+                        <NavItem label="GQLTables" href="/gql"/>
                     </SidebarSection>
                 </Sidebar>
             }

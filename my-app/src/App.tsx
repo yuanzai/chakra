@@ -8,6 +8,7 @@ import Reports from "./components/pages/reports";
 import Tables from "./components/pages/tables";
 import Property from "./components/pages/property";
 import PagiTables from "./components/pages/pagi-tables";
+import GQLTables from "./components/pages/gql";
 
 export default function App() {
     return (
@@ -20,6 +21,7 @@ export default function App() {
                     <Route path='/tables' element={<Tables/>}/>
                     <Route path='/property' element={<Property/>}/>
                     <Route path='/pagi-tables' element={<PagiTables/>}/>
+                    <Route path='/gql' element={<GQLTables/>}/>
                 </Route>
             </Routes>
         </Router>
